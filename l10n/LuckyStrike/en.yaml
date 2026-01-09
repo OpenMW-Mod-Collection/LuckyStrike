@@ -1,8 +1,14 @@
 page_name: Lucky Strike
-page_description: Luck-based critical strikes.
+page_description: |
+  Luck-based critical strikes for everyone.
 
-deathChance_name: Chance to Die (1 in N)
-deathChance_desc: |
-  The chance is rolled once a minute.
+  Crtical hit chance formula:
+  (Luck / 100) ^ 3 / 2
 
-  Set it to 0 to disable.
+  Critical hit damage formula:
+  BaseDamage * BaseCritMult * WeaponSpeed
+
+settings_groupName: Settings
+baseHpCritMult_name: Base Crit Mult (Health)
+baseFatCritMult_name: Base Crit Mult (Fatigue)
+baseMagCritMult_name: Base Crit Mult (Magicka)

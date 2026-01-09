@@ -9,9 +9,24 @@ I.Settings.registerGroup {
     order = 1,
     settings = {
         {
-            key = 'baseCritMult',
-            name = 'baseCritMult_name',
-            description = "baseCritMult_desc",
+            key = 'baseHpCritMult',
+            name = 'baseHpCritMult_name',
+            renderer = 'number',
+            integer = false,
+            default = 3,
+            min = 0,
+        },
+        {
+            key = 'baseFatCritMult',
+            name = 'baseFatCritMult_name',
+            renderer = 'number',
+            integer = false,
+            default = 3,
+            min = 0,
+        },
+        {
+            key = 'baseMagCritMult',
+            name = 'baseMagCritMult_name',
             renderer = 'number',
             integer = false,
             default = 3,

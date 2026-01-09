@@ -1,4 +1,4 @@
-PLAYER, NPC, CREATURE: scripts/LuckyStrike/player.lua
+PLAYER, NPC, CREATURE: scripts/LuckyStrike/actor.lua
 
 MENU: scripts/LuckyStrike/settingsMenu.lua
-GLOBAL: scripts/LuckyStrike/settingsMenu.lua
+GLOBAL: scripts/LuckyStrike/settingsGlobal.lua
