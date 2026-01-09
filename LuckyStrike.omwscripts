@@ -1,0 +1,4 @@
+PLAYER, NPC, CREATURE: scripts/LuckyStrike/player.lua
+
+MENU: scripts/LuckyStrike/settingsMenu.lua
+GLOBAL: scripts/LuckyStrike/settingsMenu.lua

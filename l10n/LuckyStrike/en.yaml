@@ -1,0 +1,8 @@
+page_name: Lucky Strike
+page_description: Luck-based critical strikes.
+
+deathChance_name: Chance to Die (1 in N)
+deathChance_desc: |
+  The chance is rolled once a minute.
+
+  Set it to 0 to disable.
