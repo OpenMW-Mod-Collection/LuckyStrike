@@ -25,16 +25,17 @@ local function getDamageMult(attack)
     end
     local speedMult = settingsDamage:get("weaponSpeedMult")
 
-    local mult = skillMult * weaponSkill + speedMult * weaponSpeed
-    return mult
+    return skillMult * weaponSkill + speedMult * weaponSpeed
 end
 
 local function modifyDamage(statDamage, initMult, setting)
     if not statDamage then return false end
+
     local damageMult = initMult * settingsDamage:get(setting)
     damageMult = math.max(damageMult, settingsDamage:get("minMult"))
     damageMult = math.min(damageMult, settingsDamage:get("maxMult"))
     statDamage = statDamage * damageMult
+    
     return true
 end
 

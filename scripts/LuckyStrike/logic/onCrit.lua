@@ -24,7 +24,7 @@ function OnCrit(victim, attack)
     if settingsOnCrit:get("playSound") then
         core.sound.playSound3d("critical damage", victim)
     end
-    
+
     if settingsOnCrit:get("showMessage") then
         showMessage(victim, attack)
     end
