@@ -33,7 +33,7 @@ I.Settings.registerGroup {
                 items = {
                     "Linear",  -- just trow everything in there
                     "Classic", -- (Luck / 100) ^ 3 / 2
-                    "Pure Luck", -- (0.1 + (luck.modified - 50) / 1000
+                    "Pure Luck", -- (0.1 + (luck.modified - 50) * / 1000
                 },
             },
             default = "Linear",
@@ -161,6 +161,30 @@ I.Settings.registerGroup {
             integer = false,
             default = 8,
             min = 0,
+        },
+    }
+}
+
+I.Settings.registerGroup {
+    key = 'SettingsLuckyStrike_onCrit',
+    page = 'LuckyStrike',
+    l10n = 'LuckyStrike',
+    name = 'onCrit_groupName',
+    permanentStorage = true,
+    order = 3,
+    settings = {
+        {
+            key = 'playSound',
+            name = 'playSound_name',
+            renderer = 'checkbox',
+            default = true,
+        },
+        {
+            key = 'showMessage',
+            name = 'showMessage_name',
+            description = 'showMessage_description',
+            renderer = 'checkbox',
+            default = true,
         },
     }
 }
