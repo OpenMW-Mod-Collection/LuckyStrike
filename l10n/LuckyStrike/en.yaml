@@ -1,14 +1,35 @@
+msg_critDealt: You landed a critical hit!
+msg_critTaken: You received a critical hit!
+
 page_name: Lucky Strike
-page_description: |
-  Luck-based critical strikes for everyone.
+page_description: Luck-based critical strikes for everyone.
 
-  Crtical hit chance formula:
-  (Luck / 100) ^ 3 / 2
+chance_groupName: Crit Chance
+formula_name: Formula
+formula_description: |
+  Linear -> (Luck * LuckMult + BaseChance) / 100
 
-  Critical hit damage formula:
-  BaseDamage * BaseCritMult * WeaponSpeed
+  Classic -> (Luck / 100) ^ 3 / 2
+luckMult_name: Luck Multiplier
+baseChance_name: Base Chance
+minChance_name: Minimum Chance Cap
+maxChance_name: Maximum Chance Cap
 
-settings_groupName: Settings
+damage_groupName: Crit Damage
+damage_groupDescription: |
+  General formula for critical damage multiplier is as follows:
+
+  ((WeaponSpeed * WSpeedMult) + (WeaponSkill * WSkillMult)) * BaseMult / 100
+weaponSkillMult_name: Weapon Skill Multiplier
+weaponSkillMult_description: For creatures, combat skill is used instead.
+weaponSpeedMult_name: Weapon Speed Multiplier
+weaponSpeedMult_description: For creatures, speed is considered to be 1.
 baseHpCritMult_name: Base Crit Mult (Health)
 baseFatCritMult_name: Base Crit Mult (Fatigue)
 baseMagCritMult_name: Base Crit Mult (Magicka)
+minMult_name: Minimum Damage Multiplier
+maxMult_name: Maximum Damage Multiplier
+
+onCrit_groupName: On Critical Hit
+playSound_name: Play Sound
+showMessage_name: Show Message

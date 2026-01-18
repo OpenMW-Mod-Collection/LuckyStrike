@@ -1,21 +1,11 @@
 local storage = require('openmw.storage')
-local types = require("openmw.types")
+
+require("scripts.LuckyStrike.utils.omw_utils")
 
 local settingsDamage = storage.globalSection('SettingsLuckyStrike_damage')
 
-local function getWeaponSkill(attack)
-    if attack.attacker.type == types.Creature then
-        return attack.attacker.type.records[attack.attacker.recordId].combatSkill
-    end
-
-    local skills = attack.attacker.type.stats.skills
-    local weapon = attack.weapon and attack.weapon.TYPE
-    local weaponSkill = WeaponTypes[weapon](skills)(attack.attacker)
-    return weaponSkill.modified
-end
-
 local function getDamageMult(attack)
-    local weaponSkill = getWeaponSkill(attack)
+    local weaponSkill = GetWeaponSkill(attack)
     local skillMult = settingsDamage:get("weaponSkillMult")
 
     local weaponSpeed = 1
@@ -31,11 +21,11 @@ end
 local function modifyDamage(statDamage, initMult, setting)
     if not statDamage then return false end
 
-    local damageMult = initMult * settingsDamage:get(setting)
+    local damageMult = initMult * settingsDamage:get(setting) / 100
     damageMult = math.max(damageMult, settingsDamage:get("minMult"))
     damageMult = math.min(damageMult, settingsDamage:get("maxMult"))
     statDamage = statDamage * damageMult
-    
+
     return true
 end
 

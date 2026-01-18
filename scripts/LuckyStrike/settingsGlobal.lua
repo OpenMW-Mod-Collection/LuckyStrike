@@ -9,21 +9,6 @@ I.Settings.registerGroup {
     order = 1,
     settings = {
         {
-            key = 'preset',
-            name = 'preset_name',
-            description = 'preset_description',
-            renderer = 'select',
-            argument = {
-                l10n = "LuckyStrike",
-                items = {
-                    "Modern",
-                    "Classic",
-                    "Simple",
-                },
-            },
-            default = "Modern",
-        },
-        {
             key = 'formula',
             name = 'formula_name',
             description = 'formula_description',
@@ -31,9 +16,8 @@ I.Settings.registerGroup {
             argument = {
                 l10n = "LuckyStrike",
                 items = {
-                    "Linear",  -- just trow everything in there
-                    "Classic", -- (Luck / 100) ^ 3 / 2
-                    "Pure Luck", -- (0.1 + (luck.modified - 50) * / 1000
+                    "Linear",
+                    "Classic",
                 },
             },
             default = "Linear",
@@ -43,23 +27,15 @@ I.Settings.registerGroup {
             name = 'luckMult_name',
             renderer = 'number',
             integer = false,
-            default = 3,
+            default = .1,
             min = 0,
         },
         {
-            key = 'fatigueMult',
-            name = 'fatigueMult_name',
+            key = 'baseChance',
+            name = 'baseChance_name',
             renderer = 'number',
             integer = false,
-            default = 3,
-            min = 0,
-        },
-        {
-            key = 'baseCoeff',
-            name = 'baseCoeff_name',
-            renderer = 'number',
-            integer = false,
-            default = 3,
+            default = 5,
             min = 0,
         },
         {
@@ -67,7 +43,7 @@ I.Settings.registerGroup {
             name = 'minChance_name',
             renderer = 'number',
             integer = false,
-            default = .05,
+            default = .01,
             min = 0,
             max = 1,
         },
@@ -76,7 +52,7 @@ I.Settings.registerGroup {
             name = 'maxChance_name',
             renderer = 'number',
             integer = false,
-            default = .10,
+            default = .15,
             min = 0,
             max = 1,
         },
@@ -88,27 +64,14 @@ I.Settings.registerGroup {
     page = 'LuckyStrike',
     l10n = 'LuckyStrike',
     name = 'damage_groupName',
+    description = 'damage_groupDescription',
     permanentStorage = true,
     order = 2,
     settings = {
         {
-            key = 'preset',
-            name = 'preset_name',
-            description = 'preset_description',
-            renderer = 'select',
-            argument = {
-                l10n = "LuckyStrike",
-                items = {
-                    "Modern",
-                    "Classic",
-                    "Simple",
-                },
-            },
-            default = "Modern"
-        },
-        {
             key = 'weaponSkillMult',
             name = 'weaponSkillMult_name',
+            description = 'weaponSkillMult_description',
             renderer = 'number',
             integer = false,
             default = 3,
@@ -117,9 +80,10 @@ I.Settings.registerGroup {
         {
             key = 'weaponSpeedMult',
             name = 'weaponSpeedMult_name',
+            description = 'weaponSpeedMult_description',
             renderer = 'number',
             integer = false,
-            default = 3,
+            default = 0,
             min = 0,
         },
         {
@@ -127,7 +91,7 @@ I.Settings.registerGroup {
             name = 'baseHpCritMult_name',
             renderer = 'number',
             integer = false,
-            default = 3,
+            default = 1,
             min = 0,
         },
         {
@@ -135,7 +99,7 @@ I.Settings.registerGroup {
             name = 'baseFatCritMult_name',
             renderer = 'number',
             integer = false,
-            default = 3,
+            default = 1,
             min = 0,
         },
         {
@@ -143,7 +107,7 @@ I.Settings.registerGroup {
             name = 'baseMagCritMult_name',
             renderer = 'number',
             integer = false,
-            default = 3,
+            default = 1,
             min = 0,
         },
         {
@@ -151,7 +115,7 @@ I.Settings.registerGroup {
             name = 'minMult_name',
             renderer = 'number',
             integer = false,
-            default = 2,
+            default = 1,
             min = 0,
         },
         {
@@ -159,7 +123,7 @@ I.Settings.registerGroup {
             name = 'maxMult_name',
             renderer = 'number',
             integer = false,
-            default = 8,
+            default = 4,
             min = 0,
         },
     }
@@ -182,7 +146,6 @@ I.Settings.registerGroup {
         {
             key = 'showMessage',
             name = 'showMessage_name',
-            description = 'showMessage_description',
             renderer = 'checkbox',
             default = true,
         },

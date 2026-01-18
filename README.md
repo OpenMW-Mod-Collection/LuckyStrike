@@ -2,25 +2,23 @@
 
 Luck-based crits for everyone!
 
-_Effectively an OpenMW port of R-Zero's MWSE [Lucky Strike - a Critical Hit Mod](https://www.nexusmods.com/morrowind/mods/45765)._
+_For an MWSE alternative, check out [Lucky Strike - a Critical Hit Mod](https://www.nexusmods.com/morrowind/mods/45765) by R-Zero._
 
-Everyone (both you and your enemies) now will have a chance to deal critical hits based on their Luck attribute.
+Everyone (both you and your enemies) now has a chance to deal critical hits based on their Luck attribute.
 
 ## Formulas
 
-### Crtical hit chance formula
+### Crtical hit chance formulas
 
-> (Luck / 100) ^ 3 / 2
+> **Linear (default):** (Luck \* LuckMult + BaseChance) / 100  
+> **Classic:** (Luck / 100) ^ 3 / 2
 
-Meaning, with 40 starting Luck your Crit Chance would be around 3%
+### Critical hit damage multiplier formula
 
-### Critical hit damage formula
-
-> BaseDamage \* BaseCritMult \* WeaponSpeed
-
-Weapon speed varies from 1 (for most weapons) to 2.5 (daggers).
+> (WeaponSpeed \* SpeedMult + WeaponSkill \* SkillMult) \* BaseMult / 100
 
 ## Credits
 
-**R-Zero** - Author of the original MWSE mod  
-**Sosnoviy Bor** - Author of the OpenMW port
+**Sosnoviy Bor** - Author  
+**R-Zero** - Inspiration  
+**Cybvep, Hemaris, Matt, lelimule** - Ideas for 2.0 overhaul

@@ -3,16 +3,19 @@ local types = require("openmw.types")
 local core = require("openmw.core")
 
 local settingsOnCrit = storage.globalSection('SettingsLuckyStrike_onCrit')
+local l10n = core.l10n("LuckyStrike")
 
 local function showMessage(victim, attack)
     local player
     local msg
-    if victim.types == types.Player then
+    if victim.type == types.Player then
         player = victim
-        msg = "You suffered a critical hit!"
-    elseif attack.attacker.types == types.Player then
+        ---@diagnostic disable-next-line: missing-parameter
+        msg = l10n("msg_critTaken")
+    elseif attack.attacker.type == types.Player then
         player = attack.attacker
-        msg = "You landed a critical hit!"
+        ---@diagnostic disable-next-line: missing-parameter
+        msg = l10n("msg_critDealt")
     end
 
     if player then
