@@ -20,3 +20,11 @@ function GetWeaponSkill(attack)
     local weaponSkill = WeaponTypes[weaponType](attack.attacker)
     return weaponSkill.modified
 end
+
+function IsBackHit(victim, attacker, fov)
+    local attackerYaw = attacker.rotation:getYaw()
+    local victimYaw = victim.rotation:getYaw()
+    local diff = math.abs(victimYaw - attackerYaw)
+    local npcFov = math.pi * math.abs(fov - 360) / 360
+    return diff > npcFov
+end

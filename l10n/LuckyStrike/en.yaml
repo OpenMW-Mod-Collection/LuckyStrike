@@ -7,10 +7,12 @@ page_description: Luck-based critical strikes for everyone.
 chance_groupName: Crit Chance
 formula_name: Formula
 formula_description: |
-  Linear -> (Luck * LuckMult + BaseChance) / 100
+  Linear -> (Luck * LuckMult + BackstabBonus + BaseChance) / 100
 
   Classic -> (Luck / 100) ^ 3 / 2
 luckMult_name: Luck Multiplier
+backstabBonus_name: Backstab Bonus
+actorFov_name: Actor FOV
 baseChance_name: Base Chance
 minChance_name: Minimum Chance Cap
 maxChance_name: Maximum Chance Cap

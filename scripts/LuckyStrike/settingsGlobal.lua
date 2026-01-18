@@ -31,6 +31,23 @@ I.Settings.registerGroup {
             min = 0,
         },
         {
+            key = 'backstabBonus',
+            name = 'backstabBonus_name',
+            renderer = 'number',
+            integer = false,
+            default = 5,
+            min = 0,
+        },
+        {
+            key = 'actorFov',
+            name = 'actorFov_name',
+            renderer = 'number',
+            integer = false,
+            default = 220,
+            min = 0,
+            max = 360
+        },
+        {
             key = 'baseChance',
             name = 'baseChance_name',
             renderer = 'number',

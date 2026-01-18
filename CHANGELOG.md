@@ -1,5 +1,11 @@
 # Lucky Strike (OpenMW)
 
+## 2.1
+
+### Features
+
+- Added bonus to crit chances if victim is hit in the back
+
 ## 2.0
 
 ### Features

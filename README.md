@@ -10,8 +10,10 @@ Everyone (both you and your enemies) now has a chance to deal critical hits base
 
 ### Crtical hit chance formulas
 
-> **Linear (default):** (Luck \* LuckMult + BaseChance) / 100  
+> **Linear:** (Luck \* LuckMult + BackstabBonus + BaseChance) / 100  
 > **Classic:** (Luck / 100) ^ 3 / 2
+
+Note: backstabbing is based purely on victim's FOV and not on vanilla visibility.
 
 ### Critical hit damage multiplier formula
 
