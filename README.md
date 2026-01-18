@@ -17,7 +17,7 @@ Note: backstabbing is based purely on victim's FOV and not on vanilla visibility
 
 ### Critical hit damage multiplier formula
 
-> (WeaponSpeed \* SpeedMult + WeaponSkill \* SkillMult) \* BaseMult / 100
+> (WeaponSpeed \* SpeedMult + WeaponSkill \* SkillMult) + BaseCritDmg
 
 ## Credits
 

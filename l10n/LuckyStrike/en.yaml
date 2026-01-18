@@ -21,14 +21,14 @@ damage_groupName: Crit Damage
 damage_groupDescription: |
   General formula for critical damage multiplier is as follows:
 
-  ((WeaponSpeed * WSpeedMult) + (WeaponSkill * WSkillMult)) * BaseMult / 100
+  (WeaponSpeed * WSpeedMult + WeaponSkill * WSkillMult) + BaseCritDmg
 weaponSkillMult_name: Weapon Skill Multiplier
 weaponSkillMult_description: For creatures, combat skill is used instead.
 weaponSpeedMult_name: Weapon Speed Multiplier
-weaponSpeedMult_description: For creatures, speed is considered to be 1.
-baseHpCritMult_name: Base Crit Mult (Health)
-baseFatCritMult_name: Base Crit Mult (Fatigue)
-baseMagCritMult_name: Base Crit Mult (Magicka)
+weaponSpeedMult_description: For creatures, weapon speed is considered to be 1.
+baseHpCritDmg_name: Base Crit Damage (Health)
+baseFatCritDmg_name: Base Crit Damage (Fatigue)
+baseMagCritDmg_name: Base Crit Damage (Magicka)
 minMult_name: Minimum Damage Multiplier
 maxMult_name: Maximum Damage Multiplier
 

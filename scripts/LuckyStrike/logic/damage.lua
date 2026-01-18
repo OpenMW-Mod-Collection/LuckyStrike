@@ -18,23 +18,22 @@ local function getDamageMult(attack)
     return skillMult * weaponSkill + speedMult * weaponSpeed
 end
 
-local function modifyDamage(statDamage, initMult, setting)
-    if not statDamage then return false end
+local function modifyDamage(attack, stat, initMult, setting)
+    if not attack.damage[stat] then return false end
 
-    local damageMult = initMult * settingsDamage:get(setting) / 100
+    local damageMult = initMult + settingsDamage:get(setting)
     damageMult = math.max(damageMult, settingsDamage:get("minMult"))
     damageMult = math.min(damageMult, settingsDamage:get("maxMult"))
-    statDamage = statDamage * damageMult
+    attack.damage[stat] = attack.damage[stat] * damageMult
 
     return true
 end
 
 function ModifyAttack(attack)
     local initMult = getDamageMult(attack)
-    local dmg = attack.damage
     local dmgModified = false
-    dmgModified = dmgModified or modifyDamage(dmg.health, initMult, "baseHpCritMult")
-    dmgModified = dmgModified or modifyDamage(dmg.fatigue, initMult, "baseFatCritMult")
-    dmgModified = dmgModified or modifyDamage(dmg.magicka, initMult, "baseMagCritMult")
+    dmgModified = modifyDamage(attack, "health", initMult, "baseHpCritDmg") or dmgModified
+    dmgModified = modifyDamage(attack, "fatigue", initMult, "baseFatCritDmg") or dmgModified
+    dmgModified = modifyDamage(attack, "magicka", initMult, "baseMagCritDmg") or dmgModified
     return dmgModified
 end

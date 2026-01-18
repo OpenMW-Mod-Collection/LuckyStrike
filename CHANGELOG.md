@@ -1,5 +1,15 @@
 # Lucky Strike (OpenMW)
 
+## 2.1.1
+
+### Changes
+
+- Adjusted crit damage formula and default settings
+
+### Fixes
+
+- Fixed crit damage multiplier not modifying actual damage dealt
+
 ## 2.1
 
 ### Features
