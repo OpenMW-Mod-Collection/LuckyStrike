@@ -35,3 +35,6 @@ maxMult_name: Maximum Damage Multiplier
 onCrit_groupName: On Critical Hit
 playSound_name: Play Sound
 showMessage_name: Show Message
+
+debug_groupName: Debug
+log_name: Log to Console

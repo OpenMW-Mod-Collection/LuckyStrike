@@ -1,4 +1,7 @@
+local storage = require('openmw.storage')
 local types = require("openmw.types")
+
+local settingsDebug = storage.globalSection('SettingsLuckyStrike_debug')
 
 function GetWeaponType(attack)
     if not attack.weapon then return "unarmed" end
@@ -27,4 +30,10 @@ function IsBackHit(victim, attacker, fov)
     local diff = math.abs(victimYaw - attackerYaw)
     local npcFov = math.pi * math.abs(fov - 360) / 360
     return diff > npcFov
+end
+
+function Log(message)
+    if settingsDebug:get("log") then
+        print(message)
+    end
 end

@@ -168,3 +168,20 @@ I.Settings.registerGroup {
         },
     }
 }
+
+I.Settings.registerGroup {
+    key = 'SettingsLuckyStrike_debug',
+    page = 'LuckyStrike',
+    l10n = 'LuckyStrike',
+    name = 'debug_groupName',
+    permanentStorage = true,
+    order = 100,
+    settings = {
+        {
+            key = 'log',
+            name = 'log_name',
+            renderer = 'checkbox',
+            default = false,
+        },
+    }
+}

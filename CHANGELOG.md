@@ -1,5 +1,15 @@
 # Lucky Strike (OpenMW)
 
+## 2.2
+
+### Features
+
+- Added logging
+
+### Fixes
+
+- Fixed backstabbing being triggered on any hit
+
 ## 2.1.1
 
 ### Changes
