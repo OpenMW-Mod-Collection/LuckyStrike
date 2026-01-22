@@ -1,5 +1,11 @@
 # Lucky Strike (OpenMW)
 
+## 2.2.2
+
+### Fixes
+
+- Fixed an error on striking a crit with blunt weapon
+
 ## 2.2.1
 
 ### Changes
