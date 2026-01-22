@@ -91,7 +91,7 @@ I.Settings.registerGroup {
             description = 'weaponSkillMult_description',
             renderer = 'number',
             integer = false,
-            default = .03,
+            default = .02,
             min = 0,
         },
         {

@@ -1,5 +1,11 @@
 # Lucky Strike (OpenMW)
 
+## 2.2.1
+
+### Changes
+
+- Changed default Weapon Skill Multiplier from 0.03 to 0.02
+
 ## 2.2
 
 ### Features
